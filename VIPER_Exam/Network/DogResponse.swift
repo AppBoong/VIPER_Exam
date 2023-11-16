@@ -10,7 +10,7 @@ import Foundation
 struct Dog: Decodable {
     let id, url: String
     let width, height: Int
-    let breeds: [Breed]
+    var breeds: [Breed] = []
     
     struct Breed: Decodable {
         let id, name, temperament, origin, wikipedia_url: String

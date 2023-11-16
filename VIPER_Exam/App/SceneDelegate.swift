@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Moya
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,8 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowSecene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowSecene)
-  
-        window.rootViewController = MainViewController()
+        let apiService = APIService(DogProvider: MoyaProvider<DogAPI>())
+        let mainInteractor = MainInteractor(apiService: apiService)
+        let mainPresenter = MainPresenter(interactor: mainInteractor)
+        window.rootViewController = MainViewController(presenter: mainPresenter)
         self.window = window
         self.window?.makeKeyAndVisible()
     }
