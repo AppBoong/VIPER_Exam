@@ -10,6 +10,7 @@ import Then
 import SnapKit
 import RxCocoa
 import RxSwift
+import Kingfisher
 
 final class MainViewController: UIViewController {
     private let disposeBag = DisposeBag()
@@ -39,7 +40,7 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.input.showDogs()
+        presenter.input.showDogs(limit: 20)
         
         setupUI()
         setupState()
@@ -77,21 +78,30 @@ final class DogCell: UITableViewCell {
         $0.font = .systemFont(ofSize: 20, weight: .medium)
     }
     
+    private var image = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
     
     private func setupUI() {
-        contentView.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-            make.top.bottom.equalToSuperview().inset(20)
+        contentView.addSubview(image)
+        image.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            make.height.equalTo(contentView.snp.width)
         }
     }
     
     func configure(_ dog: Dog) {
-        nameLabel.text = dog.id
+        if let imageURL = URL(string: dog.url) {
+            image.kf.setImage(with: imageURL)
+        } else {
+            image.image = nil
+        }
     }
     
     required init?(coder: NSCoder) {

@@ -10,6 +10,7 @@ import Moya
 
 enum DogAPI {
     case getRandomDog
+    case getDogs(limit: Int)
 }
 
 extension DogAPI: TargetType {
@@ -20,6 +21,8 @@ extension DogAPI: TargetType {
     var path: String {
         switch self {
         case .getRandomDog:
+            return "/search"
+        case .getDogs:
             return "/search"
         }
     }
@@ -32,6 +35,8 @@ extension DogAPI: TargetType {
         switch self {
         case .getRandomDog:
             return .requestPlain
+        case .getDogs(let limit):
+            return .requestParameters(parameters: ["limit" : limit], encoding: URLEncoding.default)
         }
     }
     

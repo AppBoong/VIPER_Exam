@@ -12,7 +12,8 @@ import Moya
 import RxMoya
 
 protocol MainInteractorProtocol {
-    func fetchDogs() -> Single<[Dog]>
+    func fetchRandomDog() -> Single<[Dog]>
+    func fetchDogs(limit: Int) -> Single<[Dog]>
 }
 
 class MainInteractor: MainInteractorProtocol {
@@ -22,8 +23,14 @@ class MainInteractor: MainInteractorProtocol {
         self.apiService = apiService
     }
     
-    func fetchDogs() -> Single<[Dog]> {
+    func fetchRandomDog() -> Single<[Dog]> {
         return apiService.DogProvider.rx.request(.getRandomDog)
+            .filterSuccessfulStatusCodes()
+            .map([Dog].self)
+    }
+    
+    func fetchDogs(limit: Int) -> Single<[Dog]> {
+        return apiService.DogProvider.rx.request(.getDogs(limit: limit))
             .filterSuccessfulStatusCodes()
             .map([Dog].self)
     }

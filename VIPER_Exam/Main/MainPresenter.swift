@@ -10,7 +10,8 @@ import RxSwift
 import RxCocoa
 
 protocol MainPresenterInput {
-    func showDogs()
+    func showRandomDog()
+    func showDogs(limit: Int)
     func showDogDetail()
 }
 
@@ -39,8 +40,20 @@ class MainPresenter: MainPresenterProtocol, MainPresenterInput, MainPresenterOut
         self.interactor = interactor
     }
     
-    func showDogs() {
-        fetchData = interactor.fetchDogs()
+    func showRandomDog() {
+        fetchData = interactor.fetchRandomDog()
+            .subscribe { [weak self] response in
+                guard let self else { return }
+                self.dogs.accept(response)
+            } onFailure: { error in
+                print("fetchError:", error)
+            }
+        
+        fetchData = nil
+    }
+    
+    func showDogs(limit: Int) {
+        fetchData = interactor.fetchDogs(limit: limit)
             .subscribe { [weak self] response in
                 guard let self else { return }
                 self.dogs.accept(response)
@@ -52,6 +65,5 @@ class MainPresenter: MainPresenterProtocol, MainPresenterInput, MainPresenterOut
     }
     
     func showDogDetail() {
-        print("showDetail")
     }
 }
