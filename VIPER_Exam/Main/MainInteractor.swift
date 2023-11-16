@@ -6,3 +6,25 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import Moya
+import RxMoya
+
+protocol MainInteractorProtocol {
+    func fetchDogs() -> Single<[Dog]>
+}
+
+class MainInteractor: MainInteractorProtocol {
+    var apiService: APIServiceProtocol
+    
+    init(apiService: APIServiceProtocol) {
+        self.apiService = apiService
+    }
+    
+    func fetchDogs() -> Single<[Dog]> {
+        return apiService.DogProvider.rx.request(.getRandomDog)
+            .filterSuccessfulStatusCodes()
+            .map([Dog].self)
+    }
+}

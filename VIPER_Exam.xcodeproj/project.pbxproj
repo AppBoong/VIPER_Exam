@@ -19,11 +19,21 @@
 		8B06FCD42B05B2BF00E5F92E /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06FCD32B05B2BF00E5F92E /* MainInteractor.swift */; };
 		8B06FCD62B05B2C800E5F92E /* MainEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06FCD52B05B2C800E5F92E /* MainEntity.swift */; };
 		8B06FCD82B05B2D500E5F92E /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B06FCD72B05B2D500E5F92E /* MainRouter.swift */; };
-		8BBE5F192B05F5F900BA5A83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F182B05F5F900BA5A83 /* Kingfisher */; };
 		8BBE5F1E2B05F62600BA5A83 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F1D2B05F62600BA5A83 /* Then */; };
 		8BBE5F222B05F78E00BA5A83 /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBE5F212B05F78E00BA5A83 /* DogAPI.swift */; };
 		8BBE5F242B06499C00BA5A83 /* DogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBE5F232B06499C00BA5A83 /* DogRequest.swift */; };
 		8BBE5F262B0649A500BA5A83 /* DogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBE5F252B0649A500BA5A83 /* DogResponse.swift */; };
+		8BBE5F292B064BF800BA5A83 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F282B064BF800BA5A83 /* RxBlocking */; };
+		8BBE5F2B2B064BF800BA5A83 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F2A2B064BF800BA5A83 /* RxBlocking-Dynamic */; };
+		8BBE5F2D2B064BF800BA5A83 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F2C2B064BF800BA5A83 /* RxCocoa */; };
+		8BBE5F2F2B064BF800BA5A83 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F2E2B064BF800BA5A83 /* RxCocoa-Dynamic */; };
+		8BBE5F312B064BF800BA5A83 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F302B064BF800BA5A83 /* RxRelay */; };
+		8BBE5F342B064C1F00BA5A83 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F332B064C1F00BA5A83 /* Kingfisher */; };
+		8BBE5F372B064C3000BA5A83 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F362B064C3000BA5A83 /* CombineMoya */; };
+		8BBE5F392B064C3000BA5A83 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F382B064C3000BA5A83 /* Moya */; };
+		8BBE5F3B2B064C3000BA5A83 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F3A2B064C3000BA5A83 /* ReactiveMoya */; };
+		8BBE5F3D2B064C3000BA5A83 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 8BBE5F3C2B064C3000BA5A83 /* RxMoya */; };
+		8BBE5F3F2B064C8F00BA5A83 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBE5F3E2B064C8E00BA5A83 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,7 @@
 		8BBE5F212B05F78E00BA5A83 /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
 		8BBE5F232B06499C00BA5A83 /* DogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRequest.swift; sourceTree = "<group>"; };
 		8BBE5F252B0649A500BA5A83 /* DogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogResponse.swift; sourceTree = "<group>"; };
+		8BBE5F3E2B064C8E00BA5A83 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +81,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BBE5F192B05F5F900BA5A83 /* Kingfisher in Frameworks */,
+				8BBE5F292B064BF800BA5A83 /* RxBlocking in Frameworks */,
+				8BBE5F312B064BF800BA5A83 /* RxRelay in Frameworks */,
+				8BBE5F392B064C3000BA5A83 /* Moya in Frameworks */,
+				8BBE5F3D2B064C3000BA5A83 /* RxMoya in Frameworks */,
+				8BBE5F3B2B064C3000BA5A83 /* ReactiveMoya in Frameworks */,
+				8BBE5F342B064C1F00BA5A83 /* Kingfisher in Frameworks */,
+				8BBE5F2D2B064BF800BA5A83 /* RxCocoa in Frameworks */,
 				8BBE5F1E2B05F62600BA5A83 /* Then in Frameworks */,
+				8BBE5F2F2B064BF800BA5A83 /* RxCocoa-Dynamic in Frameworks */,
+				8BBE5F372B064C3000BA5A83 /* CombineMoya in Frameworks */,
+				8BBE5F2B2B064BF800BA5A83 /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +189,7 @@
 				8BBE5F212B05F78E00BA5A83 /* DogAPI.swift */,
 				8BBE5F232B06499C00BA5A83 /* DogRequest.swift */,
 				8BBE5F252B0649A500BA5A83 /* DogResponse.swift */,
+				8BBE5F3E2B064C8E00BA5A83 /* APIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -190,8 +211,17 @@
 			);
 			name = VIPER_Exam;
 			packageProductDependencies = (
-				8BBE5F182B05F5F900BA5A83 /* Kingfisher */,
 				8BBE5F1D2B05F62600BA5A83 /* Then */,
+				8BBE5F282B064BF800BA5A83 /* RxBlocking */,
+				8BBE5F2A2B064BF800BA5A83 /* RxBlocking-Dynamic */,
+				8BBE5F2C2B064BF800BA5A83 /* RxCocoa */,
+				8BBE5F2E2B064BF800BA5A83 /* RxCocoa-Dynamic */,
+				8BBE5F302B064BF800BA5A83 /* RxRelay */,
+				8BBE5F332B064C1F00BA5A83 /* Kingfisher */,
+				8BBE5F362B064C3000BA5A83 /* CombineMoya */,
+				8BBE5F382B064C3000BA5A83 /* Moya */,
+				8BBE5F3A2B064C3000BA5A83 /* ReactiveMoya */,
+				8BBE5F3C2B064C3000BA5A83 /* RxMoya */,
 			);
 			productName = VIPER_Exam;
 			productReference = 8B06FC9D2B05B08A00E5F92E /* VIPER_Exam.app */;
@@ -267,11 +297,11 @@
 			mainGroup = 8B06FC942B05B08A00E5F92E;
 			packageReferences = (
 				8BBE5F162B05F5EA00BA5A83 /* XCRemoteSwiftPackageReference "Swinject" */,
-				8BBE5F172B05F5F900BA5A83 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				8BBE5F1A2B05F61100BA5A83 /* XCRemoteSwiftPackageReference "Moya" */,
 				8BBE5F1B2B05F61C00BA5A83 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8BBE5F1C2B05F62600BA5A83 /* XCRemoteSwiftPackageReference "Then" */,
-				8BBE5F1F2B05F63000BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				8BBE5F322B064C1F00BA5A83 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8BBE5F352B064C3000BA5A83 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 8B06FC9E2B05B08A00E5F92E /* Products */;
 			projectDirPath = "";
@@ -319,6 +349,7 @@
 				8BBE5F262B0649A500BA5A83 /* DogResponse.swift in Sources */,
 				8BBE5F222B05F78E00BA5A83 /* DogAPI.swift in Sources */,
 				8B06FCD82B05B2D500E5F92E /* MainRouter.swift in Sources */,
+				8BBE5F3F2B064C8F00BA5A83 /* APIService.swift in Sources */,
 				8B06FCA12B05B08A00E5F92E /* AppDelegate.swift in Sources */,
 				8B06FCA32B05B08A00E5F92E /* SceneDelegate.swift in Sources */,
 				8B06FCD42B05B2BF00E5F92E /* MainInteractor.swift in Sources */,
@@ -677,22 +708,6 @@
 				minimumVersion = 2.8.4;
 			};
 		};
-		8BBE5F172B05F5F900BA5A83 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.10.0;
-			};
-		};
-		8BBE5F1A2B05F61100BA5A83 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
 		8BBE5F1B2B05F61C00BA5A83 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -709,7 +724,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		8BBE5F1F2B05F63000BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -717,18 +732,79 @@
 				minimumVersion = 6.6.0;
 			};
 		};
+		8BBE5F322B064C1F00BA5A83 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+		8BBE5F352B064C3000BA5A83 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8BBE5F182B05F5F900BA5A83 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8BBE5F172B05F5F900BA5A83 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
-		};
 		8BBE5F1D2B05F62600BA5A83 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8BBE5F1C2B05F62600BA5A83 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		8BBE5F282B064BF800BA5A83 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		8BBE5F2A2B064BF800BA5A83 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		8BBE5F2C2B064BF800BA5A83 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		8BBE5F2E2B064BF800BA5A83 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		8BBE5F302B064BF800BA5A83 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F272B064BF800BA5A83 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		8BBE5F332B064C1F00BA5A83 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F322B064C1F00BA5A83 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8BBE5F362B064C3000BA5A83 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F352B064C3000BA5A83 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		8BBE5F382B064C3000BA5A83 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F352B064C3000BA5A83 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		8BBE5F3A2B064C3000BA5A83 /* ReactiveMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F352B064C3000BA5A83 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = ReactiveMoya;
+		};
+		8BBE5F3C2B064C3000BA5A83 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BBE5F352B064C3000BA5A83 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
